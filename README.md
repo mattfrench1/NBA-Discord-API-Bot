@@ -5,7 +5,19 @@ To add this bot to your Discord server, follow the link here: https://discord.co
 ## Run bot on local machine
 To run the bot from your local machine, head over to the developer portal and create a new application: https://discord.com/developers/applications
 
-From there, you will need to generate a token. Click on the 'Bot' tab on the left, and there should be a button to reset/create token.
+Next, click on the 'OAuth2' tab on the left, and click on 'General'. 
+
+From there, checkmark the 'bot' box, then choose the bot permissions (bot is only capable of sending messages, but feel free to customize this as you desire).
+
+After you save changes, click on the 'URL Generator' tab under 'OAuth2' and under 'scopes' checkmark the 'bot' box.
+
+From there, choose the bot permissions (can only send messages but feel free to customize).
+
+After, you will get the Generated URL at the bottom, which is the bot invite link. Save this link so you can invite the bot to your server.
+
+Next, head over to the 'Bot' tab on the left and click on 'Add Bot'.
+
+From there, you will need to generate a token. On the 'Bot' tab, click on the 'Reset Token' button to generate your token.
 
 ![image](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/4d3806d5-0e79-4179-8307-44605de7bcb3)
 
@@ -20,6 +32,8 @@ Next, you will need to install the following packages through the terminal (assu
 ```pip install pandas```
 
 ```pip install nba_api```
+
+```pip install discord.py```
 
 Lastly, you will need to update the sys.paths on the files in the cogs folder to the path where the NBA Discord API Bot is located.
 
