@@ -1,4 +1,27 @@
 # NBA API Discord Bot README
+
+## Features
+#### Get an NBA player's stats from most recent/current season.
+![!find](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/caac115e-54d3-4fa5-aff4-c2c4cea27ffb)
+
+#### Get an NBA player's awards they have won throughout their entire career.
+![!awards](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/af8d4ae9-f5ff-448b-b8e9-9da4e5d27e8e)
+
+#### Get an NBA player's advanced stats from most recent/current season.
+![!advanced](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/bdfe4fb7-e483-4619-b8ad-29499a4a60b3)
+
+#### Get the upcoming 2023-2034 NBA Finals winner prediction based on pre-season stats.
+![!predict](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/97fed2e3-e3b8-47a7-b72f-cbd2ac4a5314)
+
+#### Get an NBA player's recent shooting performances against any given team.
+![!oppshot](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/5f3e83be-1b1b-4523-a109-1e8f1166b7bf)
+
+#### Compare two NBA player's career awards and career stats.
+![!compare](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/4c6eac02-a7d1-4092-a158-1925556b3348)
+
+#### Get an NBA player's career stats.
+![!career](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/73308818-7e35-43b4-98b9-0695bbfa5d1c)
+
 ## Add bot to your Discord server
 To add this bot to your Discord server, follow the link here: https://discord.com/api/oauth2/authorize?client_id=1146552831487254579&permissions=8&scope=bot
 
@@ -39,27 +62,6 @@ Lastly, you will need to update the sys.paths on the files in the cogs folder to
 
 Finally, head over to 'bot.py' and run the file to get your bot running. To stop the bot, set your cursor in the terminal and click 'control c'.
 
-## Features
-#### Get an NBA player's stats from most recent/current season.
-![!find](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/caac115e-54d3-4fa5-aff4-c2c4cea27ffb)
-
-#### Get an NBA player's awards they have won throughout their entire career.
-![!awards](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/af8d4ae9-f5ff-448b-b8e9-9da4e5d27e8e)
-
-#### Get an NBA player's advanced stats from most recent/current season.
-![!advanced](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/bdfe4fb7-e483-4619-b8ad-29499a4a60b3)
-
-#### Get the upcoming 2023-2034 NBA Finals winner prediction based on pre-season stats.
-![!predict](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/97fed2e3-e3b8-47a7-b72f-cbd2ac4a5314)
-
-#### Get an NBA player's recent shooting performances against any given team.
-![!oppshot](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/5f3e83be-1b1b-4523-a109-1e8f1166b7bf)
-
-#### Compare two NBA player's career awards and career stats.
-![!compare](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/4c6eac02-a7d1-4092-a158-1925556b3348)
-
-#### Get an NBA player's career stats.
-![!career](https://github.com/mattfrench1/NBA-Discord-API-Bot/assets/114099168/73308818-7e35-43b4-98b9-0695bbfa5d1c)
 
 ## Future updates
 + Add a live NBA finals/regular season MVP predictor as the seasons starts.
