@@ -2,16 +2,25 @@ from nba_api.stats.endpoints import teamestimatedmetrics
 from nba_api.stats.static import teams
 
 
-def getPrediction():
+def getPrediction(year):
     '''
-    Description - Uses calculations from the seasons before NBA winners from the 2015 finals winners to the 2023 finals
+    year - String, the year of the season that will be predicted
+    Description - Uses calculations from the seasons before NBA winners from the 2015 finals winners to the future finals
     winners to predict the upcoming champion strictly based on stats from the season before. 
     (Formula to find winner does not take into account the 2020 Lakers and 2022 Warriors due to both teams having major
     roster constructions, (Lakers bringing in superstar Anthony Davis and Warriors finally having Klay/Draymond healthy) as
     these two teams were totally different from the season before they won to the following season.)
     '''
-
-    advanced_team_stats = teamestimatedmetrics.TeamEstimatedMetrics(season='2022-23')
+    year = year.replace(" ", "")
+    if not year.isdigit():
+        return 'Error! You did not enter a valid year'
+    year_int = int(year)-1
+    first_year = str(year_int-1)
+    second_year = str(year_int)[2:]
+    try:
+        advanced_team_stats = teamestimatedmetrics.TeamEstimatedMetrics(season=first_year + '-' + second_year)
+    except:
+        return 'Error! The year you entered was invalid or there is no data for that year'
 
     team_stats_dict = advanced_team_stats.get_dict()
     resultset = team_stats_dict['resultSet']
@@ -65,8 +74,10 @@ def getPrediction():
             favorite += nba_team['full_name']
             favorite += ', '
 
+    result_first_year = str(int(first_year) + 1)
+    result_second_year = str(int(second_year) + 1)
     result_string = ''
-    result_list = ['Based on my prediction model, the following teams have the best chances to win the upcoming NBA finals:\n',
+    result_list = ['Based on my prediction model, the following teams have the best chances to win the upcoming ',result_first_year ,'-', result_second_year ,' NBA finals:\n',
                    teams_string[:-2], '\n\nThe team that has the best chance of winning is the: ', favorite[:-2]]
     
     if len(preferred_teams) == 0:

@@ -3,8 +3,11 @@ from discord.ext import commands, tasks
 from itertools import cycle 
 import os
 import asyncio 
+from dotenv import load_dotenv
 
+load_dotenv()
 
+DISCORD_API_KEY = os.environ.get("DISCORD_API_KEY")
 client = commands.Bot(command_prefix="!", intents=discord.Intents.all(), help_command=None)
 
 bot_status = cycle(["'!help' for help", "'!help'", "Try: '!help' to get started"])
@@ -26,7 +29,7 @@ async def load():
 async def main():
     async with client:
         await load()
-        await client.start("Token")
+        await client.start(DISCORD_API_KEY)
 
 asyncio.run(main())
 
